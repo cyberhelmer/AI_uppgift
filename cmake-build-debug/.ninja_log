@@ -1,0 +1,6 @@
+# ninja log v6
+10	1113	1733409113270657674	CMakeFiles/AI_app.dir/main.cpp.o	223d7cf24d4691ad
+3	481	1733486489899537145	build.ninja	357bd2bfcc8b0a0
+13	1129	1733409113273547609	CMakeFiles/AI_app.dir/database.cpp.o	4986161ac9ab2011
+12	696	1733409113273154926	CMakeFiles/AI_app.dir/contact.cpp.o	9a8b2d05aaede51d
+1129	1195	1733409114390186853	AI_app	2d483a1a6eafff9c

@@ -1,0 +1,54 @@
+1. Starting promt for creating a simple application from scratch
+
+   PROMT:
+   You're now going to help me create a simple application from scratch. You can choose the easiest one from the instructions below. Even you should help me in english but the instructions will be in swedish.
+
+   Give me complete instructions step by step, which files to create and their complete code and everything else. The app should be written using C++. The interface will just be a terminal interface.
+
+   Choose one of the apllications which seems the simplest to you and give me the comlpete code file for file.
+
+   Deluppgift 2
+   Gör ett experiment med en helt autogenererad app.
+
+   Kontaktbok där man kan lägga till och spara kontakter med multipla e-mail, telefonnummer osv. SQLite eller annan databas som backer. Sökbar på namn, telefonnummer och kanske något mer. GUI eller TUI (Text User Interface - "pimpad konsol")
+   Filorganisationsverktyg - med TUI -Text User Interface - som tillåter flytt mellan mappar, omdöpning av alla filer i en mapp, partiell omdöpning av filer enligt exempelvis ett regex-mönster eller med ett tillägg konkatenerat till befintligt namn.
+   Installationsscript för dina favoritverktyg för ny utvecklardator, inklusive mappstrukturer, med ett TUI, installera minst ett programeringsspråk, en editor, en databas-motor och ett valfritt program. Skapa en mappstruktur för dina projekt, exempelvis privata/jobb
+   Valfri litet utilityprogram enligt temat ovan, med antingen lite data eller funktioner för att automatiskt/schemalagt eller liknande utföra operationer på din dator.
+   Det går bra att utifrån denna grova lista på funktioner använda AI för att prompta en förslag på en kravlista. (Ni behöver naturligtvis inte implementera allt)
+
+2. Promt to fix linker issue in CMakeLists.txt
+
+   PROMT: I get this error when trying to build:
+
+   ====================[ Build | AI_app | Debug ]==================================
+   /Applications/CLion.app/Contents/bin/cmake/mac/x64/bin/cmake --build /Users/rubymainstage/projects/AI_app/cmake-build-debug --target AI_app -j 6
+   [2/2] Linking CXX executable AI_app
+   FAILED: AI_app
+   : && /Library/Developer/CommandLineTools/usr/bin/c++ -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/AI_app.dir/main.cpp.o -o AI_app   && :
+   Undefined symbols for architecture x86_64:
+     "Contact::Contact(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)", referenced from:
+         addContact(Database&) in main.cpp.o
+     "Database::addContact(Contact const&)", referenced from:
+         addContact(Database&) in main.cpp.o
+     "Database::getAllContacts()", referenced from:
+         listContacts(Database&) in main.cpp.o
+     "Database::searchContacts(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)", referenced from:
+         searchContact(Database&) in main.cpp.o
+     "Database::Database(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)", referenced from:
+         _main in main.cpp.o
+     "Database::~Database()", referenced from:
+         _main in main.cpp.o
+     "Contact::toString() const", referenced from:
+         listContacts(Database&) in main.cpp.o
+         searchContact(Database&) in main.cpp.o
+   ld: symbol(s) not found for architecture x86_64
+   clang: error: linker command failed with exit code 1 (use -v to see invocation)
+   ninja: build stopped: subcommand failed.
+
+   3. Promt for generating readme
+
+      PROMT:
+      Write me a readme file for this project describing what it does and how to run it including necessary installations etc.
+
+      FOLLOW UP PROMPT:
+      Give me everything in code format for just pasting in to the README.txt file
